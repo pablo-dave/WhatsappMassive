@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.IO.IsolatedStorage;
@@ -45,9 +46,15 @@ namespace WhatsappMassive.Vista
             bool wc = writeCampanaJson();
             bool wcp = writeCelPhones();
 
+            Process.Start(path+"prueba.exe");
+
             if(wc && wcp)
             {
-                MessageBox.Show("Generado correctamente","Información");
+                MessageBox.Show("Ejecutando Whatsapp...","Información");
+            }
+            else
+            {
+                MessageBox.Show("Error al generar archivos base", "Error");
             }
         }
 
