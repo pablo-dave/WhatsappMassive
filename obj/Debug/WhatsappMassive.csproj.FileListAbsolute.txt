@@ -1,0 +1,15 @@
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\bin\Debug\WhatsappMassive.exe.config
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\bin\Debug\WhatsappMassive.exe
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\bin\Debug\WhatsappMassive.pdb
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\bin\Debug\MySql.Data.dll
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\bin\Debug\Newtonsoft.Json.dll
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\bin\Debug\Newtonsoft.Json.xml
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\obj\Debug\WhatsappMassive.csprojResolveAssemblyReference.cache
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\obj\Debug\WhatsappMassive.Form1.resources
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\obj\Debug\WhatsappMassive.Properties.Resources.resources
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\obj\Debug\WhatsappMassive.Vista.frmCampana.resources
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\obj\Debug\WhatsappMassive.Vista.frmContacto.resources
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\obj\Debug\WhatsappMassive.Vista.frmEnviarCampana.resources
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\obj\Debug\WhatsappMassive.csproj.GenerateResource.Cache
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\obj\Debug\WhatsappMassive.exe
+H:\UISRAEL\8VO\PLATAFORMAS DE DESARROLLO II\SEMANA 14\WhatsappMassive\obj\Debug\WhatsappMassive.pdb
