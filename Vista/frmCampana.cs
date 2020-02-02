@@ -319,17 +319,28 @@ namespace WhatsappMassive.Vista
 
         private void btnEnviarCampana_Click(object sender, EventArgs e)
         {
-            frmEnviarCampana fc = new frmEnviarCampana(this);
-            fc.ShowDialog();
+            if(txtIdPaciente.Text != "")
+            {
+                frmEnviarCampana fc = new frmEnviarCampana(this);
+                fc.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una campaña","Aviso");
+            }
+            
         }
 
         private void frmCampana_FormClosing(object sender, FormClosingEventArgs e)
         {
             // mostrar nuevamente los iconos de fondo
             Form1 frm = this.MdiParent as Form1;
-            if(frm != null)
+            if (!frm.HasChildren)
             {
-                frm.showIcons();
+                if (frm != null)
+                {
+                    frm.showIcons();
+                }
             }
         }
 

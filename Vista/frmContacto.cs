@@ -256,10 +256,14 @@ namespace WhatsappMassive.Vista
         {
             // mostrar nuevamente los iconos de fondo
             Form1 frm = this.MdiParent as Form1;
-            if (frm != null)
+            if (!frm.HasChildren)
             {
-                frm.showIcons();
+                if (frm != null)
+                {
+                    frm.showIcons();
+                }
             }
+            
         }
     }
 }
