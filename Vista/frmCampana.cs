@@ -252,6 +252,23 @@ namespace WhatsappMassive.Vista
                         dts.nombre = txtNombre.Text;
                         dts.mensaje = txtMensaje.Text;
 
+                        //guardar imagen
+                        MemoryStream ms = new MemoryStream();
+                        if (imagen.Image != null)
+                        {
+                            dts.imagen = txtImagenName.Text;
+                            imagen.Image.Save(ms, imagen.Image.RawFormat);
+
+                            FileStream file = new FileStream(path + dts.imagen, FileMode.Create, FileAccess.Write);
+                            ms.WriteTo(file);
+                            file.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Seleccione una imagen", "Aviso");
+                            return;
+                        }
+
                         if (func.editar(dts))
                         {
                             MessageBox.Show("Campana modificado correctamente", "Modificando registros", MessageBoxButtons.OK, MessageBoxIcon.Information);
