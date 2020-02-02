@@ -124,6 +124,7 @@
             this.btnEnviarCampana.TabIndex = 74;
             this.btnEnviarCampana.Text = "Enviar campaña";
             this.btnEnviarCampana.UseVisualStyleBackColor = true;
+            this.btnEnviarCampana.Click += new System.EventHandler(this.btnEnviarCampana_Click);
             // 
             // frmEnviarCampana
             // 

@@ -34,6 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,6 +60,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Campana.cs" />
+    <Compile Include="Modelo\CampanaToSend.cs" />
     <Compile Include="Modelo\Conexion.cs" />
     <Compile Include="Modelo\Contacto.cs" />
     <Compile Include="Program.cs" />
@@ -100,6 +105,7 @@
     <EmbeddedResource Include="Vista\frmEnviarCampana.resx">
       <DependentUpon>frmEnviarCampana.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -151,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\depositphotos_208226424-stock-illustration-vector-seamless-pattern-hand-drawn.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\details_open.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,21 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtflag = new System.Windows.Forms.TextBox();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMensaje = new System.Windows.Forms.TextBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
             this.txtIdPaciente = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.Label11 = new System.Windows.Forms.Label();
             this.Label10 = new System.Windows.Forms.Label();
             this.inexistente = new System.Windows.Forms.LinkLabel();
@@ -51,29 +45,34 @@
             this.datalistado = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.cbEliminar = new System.Windows.Forms.CheckBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEnviarCampana = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEnviarCampana = new System.Windows.Forms.Button();
+            this.btncargar = new System.Windows.Forms.PictureBox();
+            this.imagen = new System.Windows.Forms.PictureBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.dlg = new System.Windows.Forms.OpenFileDialog();
+            this.txtImagenName = new System.Windows.Forms.TextBox();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datalistado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btncargar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtflag
-            // 
-            this.txtflag.Location = new System.Drawing.Point(375, 22);
-            this.txtflag.Name = "txtflag";
-            this.txtflag.Size = new System.Drawing.Size(43, 20);
-            this.txtflag.TabIndex = 80;
-            this.txtflag.Visible = false;
             // 
             // GroupBox1
             // 
             this.GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox1.Controls.Add(this.txtImagenName);
+            this.GroupBox1.Controls.Add(this.btncargar);
+            this.GroupBox1.Controls.Add(this.imagen);
             this.GroupBox1.Controls.Add(this.label2);
-            this.GroupBox1.Controls.Add(this.txtflag);
             this.GroupBox1.Controls.Add(this.txtMensaje);
             this.GroupBox1.Controls.Add(this.btnGuardar);
             this.GroupBox1.Controls.Add(this.Label6);
@@ -85,9 +84,9 @@
             this.GroupBox1.Controls.Add(this.txtNombre);
             this.GroupBox1.Controls.Add(this.Label1);
             this.GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox1.Location = new System.Drawing.Point(-1, 164);
+            this.GroupBox1.Location = new System.Drawing.Point(-1, 141);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(441, 357);
+            this.GroupBox1.Size = new System.Drawing.Size(441, 380);
             this.GroupBox1.TabIndex = 81;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Datos de Contacto";
@@ -96,7 +95,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 247);
+            this.label2.Location = new System.Drawing.Point(18, 214);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
             this.label2.TabIndex = 72;
@@ -107,21 +106,8 @@
             this.txtMensaje.Location = new System.Drawing.Point(92, 97);
             this.txtMensaje.Multiline = true;
             this.txtMensaje.Name = "txtMensaje";
-            this.txtMensaje.Size = new System.Drawing.Size(349, 101);
-            this.txtMensaje.TabIndex = 71;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Image = global::WhatsappMassive.Properties.Resources.guardar;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(148, 306);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(129, 39);
-            this.btnGuardar.TabIndex = 9;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.txtMensaje.Size = new System.Drawing.Size(331, 101);
+            this.txtMensaje.TabIndex = 2;
             // 
             // Label6
             // 
@@ -151,51 +137,12 @@
             this.txtIdPaciente.Size = new System.Drawing.Size(54, 20);
             this.txtIdPaciente.TabIndex = 10;
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::WhatsappMassive.Properties.Resources.cancelar;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(283, 306);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(147, 39);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Image = global::WhatsappMassive.Properties.Resources.modificar1;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(148, 306);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(129, 39);
-            this.btnEditar.TabIndex = 7;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Image = global::WhatsappMassive.Properties.Resources.nuevo;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(6, 306);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(129, 39);
-            this.btnNuevo.TabIndex = 6;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
             // txtNombre
             // 
             this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Location = new System.Drawing.Point(94, 60);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(347, 20);
+            this.txtNombre.Size = new System.Drawing.Size(329, 20);
             this.txtNombre.TabIndex = 1;
             // 
             // Label1
@@ -225,16 +172,6 @@
             this.GroupBox2.TabIndex = 82;
             this.GroupBox2.TabStop = false;
             this.GroupBox2.Text = "LISTADO DE CONTACTOS";
-            // 
-            // PictureBox2
-            // 
-            this.PictureBox2.Image = global::WhatsappMassive.Properties.Resources.buscar;
-            this.PictureBox2.Location = new System.Drawing.Point(49, 21);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(57, 50);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox2.TabIndex = 24;
-            this.PictureBox2.TabStop = false;
             // 
             // Label11
             // 
@@ -321,19 +258,15 @@
             this.cbEliminar.UseVisualStyleBackColor = true;
             this.cbEliminar.CheckedChanged += new System.EventHandler(this.cbEliminar_CheckedChanged);
             // 
-            // btnEliminar
+            // pictureBox1
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Image = global::WhatsappMassive.Properties.Resources.eliminar1;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(585, 457);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(119, 39);
-            this.btnEliminar.TabIndex = 83;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.pictureBox1.Image = global::WhatsappMassive.Properties.Resources.marketing_whatsapp;
+            this.pictureBox1.Location = new System.Drawing.Point(47, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(342, 123);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 84;
+            this.pictureBox1.TabStop = false;
             // 
             // btnEnviarCampana
             // 
@@ -348,15 +281,114 @@
             this.btnEnviarCampana.UseVisualStyleBackColor = true;
             this.btnEnviarCampana.Click += new System.EventHandler(this.btnEnviarCampana_Click);
             // 
-            // pictureBox1
+            // btncargar
             // 
-            this.pictureBox1.Image = global::WhatsappMassive.Properties.Resources.marketing_whatsapp;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(370, 146);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 84;
-            this.pictureBox1.TabStop = false;
+            this.btncargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btncargar.Image = global::WhatsappMassive.Properties.Resources.details_open;
+            this.btncargar.Location = new System.Drawing.Point(94, 204);
+            this.btncargar.Name = "btncargar";
+            this.btncargar.Size = new System.Drawing.Size(38, 34);
+            this.btncargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btncargar.TabIndex = 74;
+            this.btncargar.TabStop = false;
+            this.btncargar.Click += new System.EventHandler(this.btncargar_Click);
+            // 
+            // imagen
+            // 
+            this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imagen.Location = new System.Drawing.Point(153, 204);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(139, 117);
+            this.imagen.TabIndex = 73;
+            this.imagen.TabStop = false;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Image = global::WhatsappMassive.Properties.Resources.guardar;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(153, 335);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(129, 39);
+            this.btnGuardar.TabIndex = 9;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = global::WhatsappMassive.Properties.Resources.cancelar;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(288, 335);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(147, 39);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Image = global::WhatsappMassive.Properties.Resources.modificar1;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(153, 335);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(129, 39);
+            this.btnEditar.TabIndex = 7;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Image = global::WhatsappMassive.Properties.Resources.nuevo;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(11, 335);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(129, 39);
+            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // PictureBox2
+            // 
+            this.PictureBox2.Image = global::WhatsappMassive.Properties.Resources.buscar;
+            this.PictureBox2.Location = new System.Drawing.Point(49, 21);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(57, 50);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox2.TabIndex = 24;
+            this.PictureBox2.TabStop = false;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = global::WhatsappMassive.Properties.Resources.eliminar1;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(585, 457);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(119, 39);
+            this.btnEliminar.TabIndex = 83;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // dlg
+            // 
+            this.dlg.FileName = "openFileDialog1";
+            // 
+            // txtImagenName
+            // 
+            this.txtImagenName.Location = new System.Drawing.Point(298, 290);
+            this.txtImagenName.Name = "txtImagenName";
+            this.txtImagenName.Size = new System.Drawing.Size(100, 20);
+            this.txtImagenName.TabIndex = 75;
+            this.txtImagenName.Visible = false;
             // 
             // frmCampana
             // 
@@ -380,17 +412,17 @@
             this.GroupBox1.PerformLayout();
             this.GroupBox2.ResumeLayout(false);
             this.GroupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datalistado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btncargar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        internal System.Windows.Forms.TextBox txtflag;
         internal System.Windows.Forms.GroupBox GroupBox1;
         internal System.Windows.Forms.Button btnGuardar;
         internal System.Windows.Forms.Label Label6;
@@ -413,8 +445,12 @@
         internal System.Windows.Forms.CheckBox cbEliminar;
         internal System.Windows.Forms.Button btnEliminar;
         internal System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMensaje;
         internal System.Windows.Forms.Button btnEnviarCampana;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.TextBox txtMensaje;
+        internal System.Windows.Forms.PictureBox btncargar;
+        internal System.Windows.Forms.PictureBox imagen;
+        private System.Windows.Forms.OpenFileDialog dlg;
+        public System.Windows.Forms.TextBox txtImagenName;
     }
 }

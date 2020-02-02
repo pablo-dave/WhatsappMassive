@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace WhatsappMassive.Vista
     public partial class frmCampana : Form
     {
         private DataTable dt = new DataTable();
+        private string path = AppDomain.CurrentDomain.BaseDirectory;
 
         public frmCampana()
         {
@@ -86,6 +88,8 @@ namespace WhatsappMassive.Vista
             txtIdPaciente.Text = "";
             txtNombre.Text = "";
             txtMensaje.Text = "";
+            txtImagenName.Text = "";
+            imagen.Image = null;
         }
 
         public void mostrar()
@@ -163,6 +167,23 @@ namespace WhatsappMassive.Vista
                     dts.nombre = txtNombre.Text;
                     dts.mensaje = txtMensaje.Text;
 
+                    //guardar imagen
+                    MemoryStream ms = new MemoryStream();
+                    if(imagen.Image != null)
+                    {
+                        dts.imagen = txtImagenName.Text;
+                        imagen.Image.Save(ms, imagen.Image.RawFormat);
+
+                        FileStream file = new FileStream(path+dts.imagen, FileMode.Create, FileAccess.Write);
+                        ms.WriteTo(file);
+                        file.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seleccione una imagen","Aviso");
+                        return; 
+                    }
+
                     if (func.insertar(dts))
                     {
                         MessageBox.Show("Campana registrado correctamente", "Guardando registros", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -188,9 +209,23 @@ namespace WhatsappMassive.Vista
             txtNombre.Enabled = true;
             txtMensaje.Enabled = true;
 
-            txtIdPaciente.Text = datalistado.SelectedCells[1].Value.ToString();
-            txtNombre.Text = datalistado.SelectedCells[2].Value.ToString();
-            txtMensaje.Text = datalistado.SelectedCells[3].Value.ToString();
+            try
+            {
+                txtIdPaciente.Text = datalistado.SelectedCells[1].Value.ToString();
+                txtNombre.Text = datalistado.SelectedCells[2].Value.ToString();
+                txtMensaje.Text = datalistado.SelectedCells[3].Value.ToString();
+                txtImagenName.Text = datalistado.SelectedCells[4].Value.ToString();
+
+                imagen.BackgroundImage = null;
+
+                imagen.Image = Image.FromFile(path + datalistado.SelectedCells[4].Value.ToString());
+                imagen.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }            
 
             btnNuevo.Visible = true;
             btnGuardar.Visible = false;
@@ -267,7 +302,7 @@ namespace WhatsappMassive.Vista
 
         private void btnEnviarCampana_Click(object sender, EventArgs e)
         {
-            frmEnviarCampana fc = new frmEnviarCampana();
+            frmEnviarCampana fc = new frmEnviarCampana(this);
             fc.ShowDialog();
         }
 
@@ -278,6 +313,18 @@ namespace WhatsappMassive.Vista
             if(frm != null)
             {
                 frm.showIcons();
+            }
+        }
+
+        private void btncargar_Click(object sender, EventArgs e)
+        {
+            if(dlg.ShowDialog() == DialogResult.OK)
+            {
+                imagen.BackgroundImage = null;
+                imagen.Image = new Bitmap(dlg.FileName);
+                imagen.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                txtImagenName.Text = dlg.SafeFileName;
             }
         }
     }

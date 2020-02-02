@@ -12,5 +12,7 @@ namespace WhatsappMassive.Modelo
         public string nombre { get; set; }
         public string mensaje { get; set; }
         public string imagen{ get; set; }
+
+        public string foto{ get; set; }
     }
 }
